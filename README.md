@@ -8,9 +8,6 @@ In daily life, people often need help from service workers, but finding trusted 
 
 As an HCI project, this website focuses on how users interact with the interface, including navigation, visual hierarchy, accessibility, consistency, and ease of use.
 
-## Live Demo
-
-
 ## Features
 
 - Home page with carousel and top worker recommendations
@@ -40,8 +37,8 @@ This project applies several Human-Computer Interaction principles:
 - Feedback: The success page gives clear confirmation after payment is completed.
 - Navigation: The website provides clear navigation between Home, Services, Transaction, and Profile pages.
 
-## 
-HCI Group 2/
+## Folder Structure
+``HCI Group 2/
 │
 ├── asset/
 │   ├── logo
@@ -79,7 +76,7 @@ HCI Group 2/
 ├── booking.html
 ├── payment.html
 ├── success.html
-└── transaction.html
+└── transaction.html``
 
 ## How to Run
 Open ``home.html`` in your browser.
