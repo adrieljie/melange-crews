@@ -1,0 +1,252 @@
+.container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    margin: 40px auto;
+    position: relative;
+    margin-top: 150px;
+}
+
+.content {
+    padding: 40px;
+}
+
+.back-btn {
+    color: var(--secondary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    color: var(--ascent);
+}
+
+.section {
+    margin-bottom: 35px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.address {
+    color: var(--secondary);
+    font-size: 16px;
+    padding: 12px 16px;
+    background: #f7fafc;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.payment-method input[type="radio"] {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--secondary);
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f7fafc;
+    flex: 1;
+    transition: all 0.2s;
+}
+
+.payment-method input[type="radio"]:checked + .payment-option {
+    border-color: var(--ascent);
+    background: #f0f4ff;
+}
+
+.payment-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+}
+
+.service-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #4a5568;
+}
+
+#serviceNotes{
+    color: #4a5568;
+}
+
+.price {
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 20px 0;
+}
+
+.total-line {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ascent);
+}
+
+.total-label{
+    margin-right: 25px;
+}
+
+.total-price {
+    color: var(--ascent);
+}
+
+.book-btn {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+    margin: 40px auto 0;
+}
+
+.book-btn:hover {
+    transform: translateY(-2px);
+    background: var(--ascent);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.book-btn:active {
+    transform: translateY(0);
+}
+
+.modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal_container.show {
+    display: flex;
+}
+
+.modal_content {
+    background: var(--primary);
+    padding: 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.modal_title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--ascent);
+}
+
+.modal_desc {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.modal_cancel, .modal_book {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.modal_cancel {
+    background-color: 294080;
+    color: var(--ascent);
+}
+
+.modal_book {
+    background: var(--secondary);
+    color: white;
+}
+
+
+.help-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.help-link a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.help-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 30px 20px;
+    }
+
+    .service-line {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}

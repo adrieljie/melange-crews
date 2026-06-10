@@ -1,0 +1,147 @@
+footer {
+	width: 100vw;
+	height: auto;
+	background: var(--ascent);
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.logo-footer {
+	margin-left: 50px;
+	margin-right: 50px;
+	width: 20vw;
+	height: auto;
+}
+
+#inner-footer-wrapper {
+	font-size: 20px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 20px;
+	border-bottom: 1px solid var(--primary);
+}
+
+#inner-footer-wrapper h3 {
+	padding: 0;
+	margin: 0;
+}
+
+.menu-contact-wrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	margin-top: 30px;
+	min-height: 200px;
+	align-items: stretch;
+}
+
+.footer-menu-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.footer-menu-wrapper a {
+	text-decoration: none;
+	color: var(--primary);
+	text-align: left;
+	width: 100%;
+}
+
+#social-media-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.img i {
+	height: 5vh;
+	width: auto;
+	color: var(--primary);
+	margin-right: 30px;
+}
+
+.menu-contact-wrapper {
+	display: flex;
+	gap: 60px;
+	flex-direction: column;
+}
+
+#footer-copyright {
+	text-align: center;
+	margin-top: 20px;
+	color: var(--primary);
+}
+
+@media screen and (min-width: 1200px) {
+	#inner-footer-wrapper {
+		flex-direction: row;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	#inner-footer-wrapper {
+		font-size: 16px;
+	}
+	.footer-menu-wrapper {
+		align-items: center;
+	}
+	.footer-menu-wrapper a b {
+		font-size: 18px;
+	}
+	.footer-menu-wrapper a {
+		text-align: center;
+	}
+	img.logo-footer {
+		height: auto;
+	}
+	.img i {
+		height: 2.5vh;
+		margin-right: 0px;
+		margin-inline: 30px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#inner-footer-wrapper {
+		font-size: 14px;
+	}
+
+	.footer-menu-wrapper a b {
+		font-size: 16px;
+	}
+	img.logo-footer {
+		height: auto;
+	}
+	.img i {
+		height: 2vh;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.menu-contact-wrapper {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	.footer-menu-wrapper {
+		flex: 1;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.menu-contact-wrapper {
+		grid-template-columns: 1fr;
+	}
+	.footer-menu-wrapper {
+		align-items: center;
+		text-align: center;
+	}
+	.footer-menu-wrapper a {
+		text-align: center;
+	}
+}

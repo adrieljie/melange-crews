@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mélange crews | Worker Profile</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+</head>
+<body>
+    <nav id="navbar">
+        <div id="nav-element-wrapper">
+            <div>
+                <a href="home.html"><img src="asset/IMG_0237-removebg-preview.png" id="nav-logo" alt="mélange crews logo"></a>
+            </div>
+            <div id="menu-wrapper">
+                <a href="home.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="transaction.html">Transaction</a>
+                <a href="#">About Us</a>
+                <a href="#" class="profile"><i class="bi bi-person-circle"></i>Profile</a>
+            </div>
+            <div id="hamburger-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+            </div>
+        </div>
+        <div id="hamburger-nav-wrapper">
+            <div class="close-btn"><i class="bi bi-x"></i></div>
+                <a href="home.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="transaction.html">Transaction</a>
+                <a href="#">About Us</a>
+                <a href="#" class="profile"><i class="bi bi-person-circle"></i>Profile</a>
+        </div>
+    </nav>
+    
+    <div class="main-container">
+        <div class="profile-card">
+            <a href="home.html" class="back-button">
+                ← Back
+            </a>
+            <div class="section">
+                <div class="profile-header">
+                    <div class="profile-left">
+                        <div class="profile-image">
+                            <img src="" alt="Profile Photo">
+                        </div>
+                        <div class="ratings-section">
+                            <h2 class="section-title">Ratings</h2>
+                            <div class="stars">
+                                <span class="star"><i class="bi bi-star-fill"></i></span>
+                                <span class="star"><i class="bi bi-star-fill"></i></span>
+                                <span class="star"><i class="bi bi-star-fill"></i></span>
+                                <span class="star"><i class="bi bi-star-fill"></i></span>
+                                <span class="star empty"><i class="bi bi-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-right">
+                        <h1 class="profile-name"></h1>
+                        <p class="profile-role"></p>
+                        <div class="action-buttons">
+                            <a href="booking.html?category=category" class="btn btn-primary">Book Now</a>
+                            <a href="#" class="btn btn-secondary">Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="about-text">
+                        I'm a dependable and courteous driver with a focus on safety, comfort, and great customer service. I take pride in keeping my vehicle clean and well-maintained so every ride feels relaxed and enjoyable. Whether you're commuting, heading out with friends, or catching a flight, I'm here to get you where you need to go—on time and stress-free. Looking forward to having you in the car!
+                    </p>
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    <footer>
+        <div id="inner-footer-wrapper">
+            <div>
+                <a href="html/home.html"><img class="logo-footer" src="asset/IMG_0237-removebg-preview.png" alt=""></a>
+            </div>
+            <div class="menu-contact-wrapper">
+                <div class="footer-menu-wrapper">
+                    <a href="home.html"><b>Mélange Crews</b></a>
+                    <a href="#">About Us</a>
+                    <a href="#">Testimony</a>
+                    <a href="services.html">Services</a>
+                </div>
+                <div class="footer-menu-wrapper">
+                    <a href="#"><b>Help & Guidelines</b></a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Help</a>
+                </div>
+                <div class="footer-menu-wrapper">
+                    <a href="#"><b>Follow Us</b></a>
+                    <div id="social-media-wrapper">
+                        <a href="https://www.instagram.com" class="img"><i class="bi bi-instagram"></i></a>
+                        <a href="https://x.com" class="img"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.tiktok.com/explore" class="img"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="footer-copyright">© 2025 mélange crews. All rights reserved.</div>
+    </footer>
+    
+    <script src="js/navbar.js"></script>
+    <script>
+    const bookBtn = document.querySelector('.btn.btn-primary');
+    const profile_name = document.querySelector('.profile-name');
+    const profile_role = document.querySelector('.profile-role');
+    const profile_image = document.querySelector('.profile-image img');
+    const about_text = document.querySelector('.about-text');
+
+    const searchParams = new URLSearchParams(window.location.search);
+
+    profile_name.innerText = searchParams.get('name');
+    profile_role.innerText = searchParams.get('category');
+    profile_image.src = searchParams.get('image');
+    about_text.innerText = searchParams.get('about');
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach((section, index) => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    });
+    const name = searchParams.get('name');
+    const category = searchParams.get('category');
+    const image = searchParams.get('image');
+    if (bookBtn && category) {
+        bookBtn.href = `booking.html?category=${encodeURIComponent(category)}&name=${encodeURIComponent(name)}&image=${encodeURIComponent(image)}`;
+    }
+    </script>
+   
+</body>
+</html>

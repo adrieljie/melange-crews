@@ -1,0 +1,149 @@
+#transaction-section {
+    height: auto;
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+
+#transaction-section h1{
+    color: var(--secondary);
+    text-align: center;
+    font-size: 3em;
+}
+
+#inner-transaction-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 20px; */
+    padding-inline: 30px;
+}
+
+#transaction, #category, #transaction-history {
+    background-color: var(--primary);
+    padding: 50px;
+    border-radius: 10px;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+    margin: 10px;
+}
+
+#inner-transaction-wrapper div:nth-last-child(1) {
+    grid-column: 1 / span1;
+}
+
+/* #transaction-history {
+    grid-column: 1 / span1;
+} */
+
+
+#transaction, #category {
+    color: var(--secondary);
+    h2 {
+        font-size: 3em;
+        line-height: 0px;
+        height: 20px;
+    }
+    p {
+        font-size: 2em;
+        line-height: 0px;
+        height: 0px;
+    }
+}
+
+.history-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary);
+    margin-inline: 20px;
+    padding-inline: 40px;
+    border-left: 6px solid var(--secondary);
+}
+
+.transaction-left {
+    line-height: 0px;
+    h3 {
+        font-weight: bold;
+        font-size: 2em;
+        height: 10px;
+    }
+    p {
+        font-size: 1.4em;
+        height: 10px;
+    }
+}
+
+.transaction-right {
+    line-height: 0px;
+    p {
+        font-size: 1.4em;
+        height: 10px;
+    }
+}
+
+#transaction-history {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media screen and (max-width: 1090px) {
+    #transaction, #category, #transaction-history {
+        padding: 20px;
+    }
+    #transaction, #category {
+        h2 {
+            font-size: 2em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+    }
+    .transaction-left {
+        h3 {
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1em;
+        }
+    }
+
+    .transaction-right {
+        p {
+            font-size: 1em;
+        }
+    }
+    .history-card {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    #transaction, #category {
+        h2 {
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1em;
+        }
+    }
+    .transaction-left {
+        h3 {
+            font-size: 1em;
+        }
+        p {
+            font-size: 0.9em;
+        }
+    }
+
+    .transaction-right {
+        p {
+            font-size: 0.9em;
+        }
+    }
+    .history-card {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+}

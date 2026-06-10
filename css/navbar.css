@@ -1,0 +1,216 @@
+#navbar {
+    background: var(--secondary);
+    height: 100px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0px 0px 20px var(--secondary);
+}
+
+#nav-element-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+
+#nav-logo {
+    width: auto;
+    height: 10vh;
+}
+
+#menu-wrapper {
+    display: none;
+    align-items: center;
+    font-weight: bold;
+}
+
+#register-btn{
+    background: var(--primary);
+    color: var(--secondary) !important;
+    padding: 8px 18px;
+    border: var(--primary) 2px solid;
+    border-radius: 30px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+#register-btn:hover{
+    transition: all 0.2s ease-in-out;
+    background: #15285a;
+    color: var(--primary) !important;
+    border: #15285a 2px solid;
+}
+
+#menu-wrapper a:not(#register-btn):not(#login-btn) {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1em;
+    transition: all 0.2s ease-in-out;
+    margin: 0 30px;
+    text-wrap: nowrap;
+}
+
+#menu-wrapper a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #FFFFFF;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+#register-btn::after, #login-btn::after {
+    content: none !important;
+}
+
+#menu-wrapper a:hover::after {
+    width: 100%;
+}
+
+#login-btn{
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 8px 18px;
+    border: var(--primary) 2px solid;
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    text-wrap: nowrap;
+    text-decoration: none;
+}
+#login-btn:hover{
+    transition: all 0.2s ease-in-out;
+    background: #15285a;
+    color: var(--primary);
+    border: #15285a 2px solid;
+}
+
+.profile i {
+    margin-right: 10px;
+}
+
+#hamburger-wrapper {
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary);
+    transition: 0.3s;
+}
+
+#hamburger-nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100vh;
+    background: var(--secondary);
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 9998;
+    padding: 20px 0;
+    box-shadow: -5px 0px 15px rgba(0,0,0,0.3);
+    transition: right 0.3s ease-in-out;
+}
+
+.close-btn i{
+    color: var(--primary);
+    font-size: 24px;
+    padding: 15px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.close-btn i:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+#hamburger-nav-wrapper.active {
+    right: 0;
+}
+
+#hamburger-nav-wrapper a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: background-color 0.3s;
+}
+
+#hamburger-nav-wrapper a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Hamburger animation */
+#hamburger-wrapper.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+#hamburger-wrapper.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger-wrapper.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.active::after {
+    /* border-bottom: 2px solid var(--primary); */
+    content: '';
+    width: 100% !important;
+    height: 2px;
+    background-color: #FFFFFF;
+    display: block;
+    margin: auto;
+}
+
+.active-mobile {
+    text-decoration: underline 2px !important;
+    text-underline-offset: 4px;
+}
+
+@media screen and (min-width: 870px) {
+    #menu-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    
+    #hamburger-wrapper {
+        display: none;
+    }
+    
+    #hamburger-nav-wrapper {
+        right: -300px !important;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    #menu-wrapper a:not(#register-btn):not(#login-btn) {
+        margin: 0 10px;
+    }
+
+    #login-btn {
+        margin-left: 20px;
+    }
+}
