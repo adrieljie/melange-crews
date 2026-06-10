@@ -38,7 +38,9 @@ This project applies several Human-Computer Interaction principles:
 - Navigation: The website provides clear navigation between Home, Services, Transaction, and Profile pages.
 
 ## Folder Structure
-``HCI Group 2/
+
+``
+HCI Group 2/
 │
 ├── asset/
 │   ├── logo
