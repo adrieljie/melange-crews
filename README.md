@@ -1,4 +1,4 @@
-# mélange crews
+# About mélange crews
 
 mélange crews is a Human-Computer Interaction (HCI) group project that focuses on designing and developing a service marketplace website. The platform helps users find and book workers for everyday needs, such as drivers, plumbers, AC technicians, electricians, babysitters, tailors, chefs, and gardeners.
 
@@ -39,7 +39,7 @@ This project applies several Human-Computer Interaction principles:
 
 ## Folder Structure
 
-``
+```bash
 HCI Group 2/
 │
 ├── asset/
@@ -78,7 +78,8 @@ HCI Group 2/
 ├── booking.html
 ├── payment.html
 ├── success.html
-└── transaction.html``
+└── transaction.html
+```
 
 ## How to Run
 Open ``home.html`` in your browser.
